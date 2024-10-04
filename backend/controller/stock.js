@@ -32,7 +32,7 @@ async function tradeUtils(req,res) {
 };
 
 // Get a summary of the current profit/loss and balance
-async function getSummary() {
+function getSummary() {
     const totalValue = balance + (stocksOwned * stockPrice);
     return {
         balance,
@@ -43,7 +43,7 @@ async function getSummary() {
 }
 -
 async function summaryUtils(req,res){
-    const summary = getSummary(); // Get performance summary
+    const summary =await getSummary(); // Get performance summary
     res.json({message:summary});
 }
 

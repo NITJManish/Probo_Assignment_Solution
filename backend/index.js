@@ -9,8 +9,8 @@ dotenv.config({ path: "backend/config/config.env" });
 app.use('/api', stockRoute);
 
 // Start server
-const port = 3000;
-app.listen(port, (err) => {
+const PORT = process.env.PORT || 8080;
+app.listen(PORT, (err) => {
     if(!err)
-    console.log(`Server running on port ${port}`);
+    console.log(`Server running on port ${process.env.PORT} in ${process.env.NODE_ENV}`);
 });
