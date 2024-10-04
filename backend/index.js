@@ -12,5 +12,5 @@ app.use('/api', stockRoute);
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, (err) => {
     if(!err)
-    console.log(`Server running on port ${process.env.PORT} in ${process.env.NODE_ENV}`);
+    console.log(`Server running on port ${process.env.PORT} in ${process.env.NODE_ENV} mode.`);
 });
