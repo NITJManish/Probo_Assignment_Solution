@@ -1,0 +1,31 @@
+Instructions to run Nodejs API code
+
+1.#### command to run code : npm run dev(for developement mode)
+
+### Endpoints Available:
+
+GET /api/stock-price: Get the current stock price.
+
+POST /api/trade: Execute a trade based on the trading bot’s strategy.
+
+GET /api/summary: Get a summary of the trading bot’s performance, including profit/loss and balance.
+
+Test API using postman:
+
+### When you hit the /api/trade and /api/summary endpoints, you’ll see responses like:
+
+json
+
+{
+  "message": "Trade executed",
+  "currentPrice": 101.5
+}
+
+json
+
+{
+  "balance": 900,
+  "stocksOwned": 1,
+  "totalValue": 1001.5,
+  "profitLoss": 1.5
+}
